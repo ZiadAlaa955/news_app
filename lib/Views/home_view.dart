@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/Widgets/category_list_view.dart';
 import 'package:news_app/Widgets/news_list_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -30,8 +31,20 @@ class HomeView extends StatelessWidget {
         ),
       ),
       body: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: NewsListView(),
+        padding: EdgeInsets.all(10),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: CategoryListView(),
+            ),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 15,
+              ),
+            ),
+            NewsListView(),
+          ],
+        ),
       ),
     );
   }

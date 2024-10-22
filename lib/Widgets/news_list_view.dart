@@ -24,11 +24,13 @@ class NewsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: newsList.length,
-      itemBuilder: (context, index) {
-        return NewsTile(newsTileModel: newsList[index]);
-      },
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        childCount: newsList.length,
+        (context, index) {
+          return NewsTile(newsTileModel: newsList[index]);
+        },
+      ),
     );
   }
 }
