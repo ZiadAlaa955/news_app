@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/news_tile_model.dart';
+import 'package:news_app/Models/news_model.dart';
 
 class NewsTile extends StatelessWidget {
   const NewsTile({super.key, required this.newsTileModel});
-  final NewsTileModel newsTileModel;
+  final NewsModel newsTileModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,7 +36,7 @@ class NewsTile extends StatelessWidget {
           height: 5,
         ),
         Text(
-          newsTileModel.subTitle,
+          newsTileModel.subTitle!,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(

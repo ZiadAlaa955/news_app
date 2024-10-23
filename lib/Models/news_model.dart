@@ -1,10 +1,10 @@
-class NewsTileModel {
+class NewsModel {
   final String? image;
   final String title;
-  final String subTitle;
+  final String? subTitle;
 
-  const NewsTileModel({
-    this.image,
+  const NewsModel({
+    required this.image,
     required this.title,
     required this.subTitle,
   });
