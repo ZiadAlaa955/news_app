@@ -3,7 +3,7 @@ import 'package:news_app/Services/get_news.dart';
 import 'package:news_app/Views/home_view.dart';
 
 void main() {
-  GetNews().getTopHeadlines();
+  newsService().getTopHeadlines();
   runApp(const NewsApp());
 }
 
