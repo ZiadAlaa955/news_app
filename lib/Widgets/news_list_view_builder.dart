@@ -11,8 +11,8 @@ class NewsListViewBuilder extends StatefulWidget {
 }
 
 class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
+  dynamic future;
   @override
-  var future;
   void initState() {
     super.initState();
     future = newsService().getTopHeadlines();
