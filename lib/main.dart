@@ -4,7 +4,6 @@ import 'package:news_app/Views/category_view.dart';
 import 'package:news_app/Views/home_view.dart';
 
 void main() {
-  newsService().getTopHeadlines();
   runApp(const NewsApp());
 }
 

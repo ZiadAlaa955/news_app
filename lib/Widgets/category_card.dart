@@ -9,7 +9,8 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, CategoryView.id);
+        Navigator.pushNamed(context, CategoryView.id,
+            arguments: categoryCardModel.name);
       },
       child: Padding(
         padding: const EdgeInsets.only(right: 8),
