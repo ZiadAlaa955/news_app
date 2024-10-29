@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Services/get_news.dart';
 import 'package:news_app/Views/category_view.dart';
 import 'package:news_app/Views/home_view.dart';
 

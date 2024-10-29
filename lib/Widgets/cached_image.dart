@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/news_model.dart';
 
-class cachedImage extends StatelessWidget {
-  const cachedImage({super.key, required this.newsTileModel});
+class CachedImage extends StatelessWidget {
+  const CachedImage({super.key, required this.newsTileModel});
 
   final NewsModel newsTileModel;
 

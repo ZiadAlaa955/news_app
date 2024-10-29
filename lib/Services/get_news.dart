@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:news_app/Models/news_model.dart';
 
-class newsService {
+class NewsService {
   final dio = Dio();
   final String apiKey = '35579faa102c46c091da416fd3caef1a';
   final String baseUrl = 'https://newsapi.org/v2';
@@ -22,6 +22,7 @@ class newsService {
           image: article["urlToImage"],
           title: article["title"],
           subTitle: article["description"],
+          url: article["url"],
         );
         articleList.add(newsModel);
       }
