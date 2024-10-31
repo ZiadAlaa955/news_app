@@ -10,4 +10,13 @@ class NewsModel {
     required this.title,
     required this.subTitle,
   });
+
+  factory NewsModel.fromJson(json) {
+    return NewsModel(
+      image: json["urlToImage"],
+      title: json["title"],
+      subTitle: json["description"],
+      url: json["url"],
+    );
+  }
 }
