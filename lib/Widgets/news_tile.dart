@@ -5,6 +5,7 @@ import 'package:news_app/Widgets/web_view.dart';
 
 class NewsTile extends StatelessWidget {
   const NewsTile({super.key, required this.newsTileModel});
+
   final NewsModel newsTileModel;
   @override
   Widget build(BuildContext context) {

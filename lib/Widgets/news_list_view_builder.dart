@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/news_model.dart';
-import 'package:news_app/Services/get_news.dart';
+import 'package:news_app/Services/news_service.dart';
 import 'package:news_app/Widgets/news_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
