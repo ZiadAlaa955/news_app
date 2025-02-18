@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:news_app/Models/news_model.dart';
-import 'package:news_app/Services/news_service.dart';
+import 'package:news_app/Features/Home/Data/Models/news_model.dart';
+import 'package:news_app/Core/Utils/news_service.dart';
 
 part 'news_state.dart';
 

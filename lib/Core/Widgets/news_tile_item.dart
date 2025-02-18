@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/news_model.dart';
-import 'package:news_app/Widgets/cached_image.dart';
+import 'package:news_app/Features/Home/Data/Models/news_model.dart';
+import 'package:news_app/Features/Home/Presentation/Views/Widgets/cached_image.dart';
 
 class NewsTileItem extends StatelessWidget {
   const NewsTileItem({super.key, required this.newsTileModel});

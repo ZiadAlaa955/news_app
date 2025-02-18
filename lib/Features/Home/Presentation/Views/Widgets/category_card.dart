@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/category_card_model.dart';
-import 'package:news_app/Views/category_view.dart';
-import 'package:news_app/Widgets/build_card.dart';
+import 'package:go_router/go_router.dart';
+import 'package:news_app/Core/Utils/app_routes.dart';
+import 'package:news_app/Features/Home/Data/Models/category_card_model.dart';
+import 'package:news_app/Core/Widgets/build_card.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({super.key, required this.categoryCardModel});
@@ -11,11 +12,8 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(
-          context,
-          CategoryView.id,
-          arguments: categoryCardModel.name,
-        );
+        GoRouter.of(context)
+            .push(AppRoutes.kCategoryView, extra: categoryCardModel.name);
       },
       child: BuildCard(
         categoryCardModel: categoryCardModel,

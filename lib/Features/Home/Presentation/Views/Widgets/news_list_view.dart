@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/news_model.dart';
-import 'package:news_app/Widgets/news_tile.dart';
+import 'package:news_app/Features/Home/Data/Models/news_model.dart';
+import 'package:news_app/Features/Home/Presentation/Views/Widgets/news_tile.dart';
 
 class NewsListView extends StatelessWidget {
   const NewsListView({super.key, required this.newsList});

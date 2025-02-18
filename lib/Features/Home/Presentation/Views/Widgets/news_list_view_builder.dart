@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/Widgets/news_list_view.dart';
-import 'package:news_app/news_cubit/news_cubit.dart';
+import 'package:news_app/Features/Home/Presentation/Views/Widgets/news_list_view.dart';
+import 'package:news_app/Features/Home/Presentation/Manager/news_cubit/news_cubit.dart';
 
 class NewsListViewBuilder extends StatelessWidget {
   const NewsListViewBuilder({super.key, required this.category});

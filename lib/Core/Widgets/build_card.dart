@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/category_card_model.dart';
+import 'package:news_app/Features/Home/Data/Models/category_card_model.dart';
 
 class BuildCard extends StatelessWidget {
   const BuildCard({super.key, required this.categoryCardModel});

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Widgets/category_app_bar_title.dart';
-import 'package:news_app/Widgets/news_list_view_builder.dart';
+import 'package:news_app/Features/Home/Presentation/Views/Widgets/category_app_bar_title.dart';
+import 'package:news_app/Features/Home/Presentation/Views/Widgets/news_list_view_builder.dart';
 
 class CategoryView extends StatelessWidget {
-  const CategoryView({super.key});
+  const CategoryView({super.key, required this.categoryName});
 
-  static String id = 'categoryView';
+  final String categoryName;
   @override
   Widget build(BuildContext context) {
-    String categoryName = ModalRoute.of(context)?.settings.arguments as String;
+    // String categoryName = ModalRoute.of(context)?.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
         title: CategoryAppBarTitle(categoryName: categoryName),

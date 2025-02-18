@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/news_model.dart';
+import 'package:news_app/Features/Home/Data/Models/news_model.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebView extends StatefulWidget {
