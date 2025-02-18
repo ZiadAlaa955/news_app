@@ -4,6 +4,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 class WebView extends StatefulWidget {
   const WebView({super.key, required this.newsModel});
+
   final NewsModel newsModel;
   @override
   State<WebView> createState() => _WebViewState();

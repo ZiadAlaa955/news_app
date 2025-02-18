@@ -1,32 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/news_model.dart';
-import 'package:news_app/Services/news_service.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/Widgets/news_list_view.dart';
+import 'package:news_app/news_cubit/news_cubit.dart';
 
-class NewsListViewBuilder extends StatefulWidget {
+class NewsListViewBuilder extends StatelessWidget {
   const NewsListViewBuilder({super.key, required this.category});
-  final String category;
-  @override
-  State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
-}
 
-class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
-  dynamic future;
-  @override
-  void initState() {
-    super.initState();
-    future = NewsService().getTopHeadlines(widget.category);
-  }
+  final String category;
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<NewsModel>>(
-      future: future,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return NewsListView(newsList: snapshot.data ?? []);
-        } else if (snapshot.hasError) {
-          return const Text('Oops, there is an error , try later');
+    BlocProvider.of<NewsCubit>(context).getNews(category);
+
+    return BlocBuilder<NewsCubit, NewsState>(
+      builder: (context, state) {
+        if (state is NewsLoaded) {
+          return NewsListView(newsList: state.newsList ?? []);
+        } else if (state is NewsFailure) {
+          return Text(state.errorMessage);
         } else {
           return const SliverToBoxAdapter(
             child: Center(

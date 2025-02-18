@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:news_app/Models/news_model.dart';
 
@@ -18,8 +17,7 @@ class NewsService {
 
       List<NewsModel> articleList = [];
       for (var article in articles) {
-        NewsModel newsModel = NewsModel.fromJson(article);
-        articleList.add(newsModel);
+        articleList.add(NewsModel.fromJson(article));
       }
       return articleList;
     } on DioException catch (e) {
